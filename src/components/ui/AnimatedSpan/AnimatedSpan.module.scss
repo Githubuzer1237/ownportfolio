@@ -1,0 +1,15 @@
+@import "@/Vars.scss";
+
+.animatedSpan {
+  color: $colorSecond;
+  -webkit-text-stroke: 0px $colorSecond;
+  font-variation-settings: "wght" 800, "wdth" 125;
+  font-family: "StudioFeixenSans-Variable";
+  cursor: help;
+  letter-spacing: normal;
+
+  background-image: url(/wawe.svg);
+  background-size: 60px;
+  background-repeat: repeat-x;
+  background-position: left 0 bottom;
+}

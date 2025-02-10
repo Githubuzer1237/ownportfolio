@@ -1,0 +1,99 @@
+@import "./Vars.scss";
+
+body {
+    // font-family: "Studio Feixen Sans Lahti";
+    // font-family: 'Studio Feixen Sans Lahti Headline';
+    // font-family: 'Studio Feixen Sans Lahti Book';
+
+    font-family: "StudioFeixenSans-Variable", Arial, Helvetica, sans-serif;
+
+    // font-family: 'StudioFeixenSans-Bold';
+
+    color: $colorLight;
+    background-color: #34343c;
+
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+.container {
+    // max-width: 100px;
+    // width: 100%;
+    // margin: 0 auto;
+    // padding: 0 80px;
+    padding: 0 clamp(1.25rem, 0.313rem + 4.69vw, 5rem);
+}
+
+.noise {
+    animation: noiseAnim 7s steps(10) infinite;
+    background-image: url(/noise.png);
+    position: fixed;
+    z-index: 9999;
+    top: -300%;
+    left: -150%;
+    height: 600%;
+    width: 600%;
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+@keyframes noiseAnim {
+    10% {
+        transform: translate(-5%, -10%);
+    }
+    20% {
+        transform: translate(-15%, 5%);
+    }
+    30% {
+        transform: translate(7%, -25%);
+    }
+    40% {
+        transform: translate(-5%, 25%);
+    }
+    50% {
+        transform: translate(-15%, 10%);
+    }
+    60% {
+        transform: translate(15%);
+    }
+    70% {
+        transform: translateY(15%);
+    }
+    80% {
+        transform: translate(3%, 35%);
+    }
+    90% {
+        transform: translate(-10%, 10%);
+    }
+}
+
+// SCROLLBAR
+
+/* Скрытие стандартных скроллбаров */
+*::-webkit-scrollbar {
+    width: 8px; /* минимальная ширина */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Для скрытия скроллбара по умолчанию */
+.react-scrollbars-custom::-webkit-scrollbar {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Когда скроллбар используется, показываем его */
+.react-scrollbars-custom:hover::-webkit-scrollbar {
+    opacity: 1;
+}
+

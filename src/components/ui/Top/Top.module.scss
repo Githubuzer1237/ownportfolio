@@ -1,0 +1,28 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    border-bottom: 1px solid lightgray;
+
+    margin-bottom: 30px;
+
+    h3 {
+        // font-size: 48px;
+        font-size: clamp(1.5rem, 1.125rem + 1.88vw, 3rem);
+
+        font-weight: 500;
+        text-transform: uppercase;
+        font-variation-settings:
+            "wght" 800,
+            "wdth" 125;
+    }
+
+    p {
+        // font-size: 36px;
+        font-size: clamp(1.375rem, 1.156rem + 1.09vw, 2.25rem);
+        
+        font-weight: 600;
+    }
+}

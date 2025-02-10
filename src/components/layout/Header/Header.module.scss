@@ -1,0 +1,61 @@
+@import "@/Vars.scss";
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    @media (max-width: 480px) {
+      position: relative;
+      left: -10px;
+    }
+}
+
+.header {
+    // padding-top: 80px;
+    padding-top: clamp(1.25rem, 0.313rem + 4.69vw, 5rem);
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 1;
+    width: max-content;
+    color: $colorMain;
+}
+
+.theme {
+    // временно скрыл смену темы
+    display: none;
+}
+
+.burger {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+    aspect-ratio: 1;
+    color: rgb(247, 247, 247);
+    background: none;
+    color: $colorMain;
+
+    position: relative;
+
+    z-index: 100;
+
+    transition: 0.5s;
+
+    mix-blend-mode: difference !important;
+
+
+    *{
+        color: $colorMain;
+        mix-blend-mode: difference !important;
+    }
+}
